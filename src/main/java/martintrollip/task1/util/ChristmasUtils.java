@@ -28,9 +28,7 @@ public class ChristmasUtils {
     }
 
     /**
-     * Returns the number of days until the next Christmas (month 12, day 25).
-     *
-     * @return A user-friendly message indicating the number of days until Christmas.
+     * @return A user-friendly message indicating the number of days until the next Christmas (month 12, day 25).
      *
      * For example if the current clock is 2020/06/16 the returned message is "192 days until Christmas!",
      *             if the current clock is 2020/12/34 the returned message is "1 day until Christmas!",
@@ -38,7 +36,7 @@ public class ChristmasUtils {
      *             if the current clock is 2020/12/26 the returned message is "364 days until Christmas!"
      */
     public String getDaysUntilChristmasMessage() {
-        long daysUntilChristmas = ChronoUnit.DAYS.between(LocalDate.now(clock).atStartOfDay(), nextChristmas());
+        long daysUntilChristmas = daysUntilChristmas();
 
         if (daysUntilChristmas == 0) {
             return "Merry Christmas! \uD83C\uDF84 \uD83C\uDF84 \uD83C\uDF84"; // \uD83C\uDF84 is a Christmas tree emoji
@@ -49,7 +47,11 @@ public class ChristmasUtils {
         }
     }
 
-    private LocalDateTime nextChristmas() {
+    private long daysUntilChristmas() {
+        return ChronoUnit.DAYS.between(LocalDate.now(clock).atStartOfDay(), nextChristmasDate());
+    }
+
+    private LocalDateTime nextChristmasDate() {
         LocalDate today = LocalDate.now(clock);
         LocalDate christmas = LocalDate.of(today.getYear(), DECEMBER, CHRISTMAS);
 

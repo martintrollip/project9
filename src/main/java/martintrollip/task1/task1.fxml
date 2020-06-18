@@ -5,7 +5,9 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.text.Text?>
 
-<GridPane fx:controller="martintrollip.task1.Controller"
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<GridPane fx:controller="martintrollip.task1.controller.Controller"
     xmlns:fx="http://javafx.com/fxml" hgap="10" vgap="10">
     <padding>
         <Insets top="25" right="25" bottom="10" left="25"/>
@@ -24,9 +26,51 @@
     </Button>
 
     <Button
-        fx:id="loadCSVButton"
+        fx:id="loadButton"
         text="Load CSV"
-        GridPane.columnSpan="2" GridPane.columnIndex="0" GridPane.rowIndex="5"
+        GridPane.columnSpan="1" GridPane.columnIndex="0" GridPane.rowIndex="7"
         onAction="#handleLoadCSVAction">
     </Button>
+
+    <Button
+        fx:id="nextButton"
+        text="Next page"
+        disable="true"
+        GridPane.columnSpan="1" GridPane.columnIndex="1" GridPane.rowIndex="7"
+        onAction="#handleNextAction">
+    </Button>
+
+    <TableView fx:id="salesTableView" GridPane.columnIndex="0" GridPane.rowIndex="9"
+        GridPane.columnSpan="2">
+        <columns>
+            <TableColumn fx:id="regionColumn" text="Region" prefWidth="150">
+            </TableColumn>
+            <TableColumn fx:id="countryColumn" text="Country" prefWidth="150">
+            </TableColumn>
+            <TableColumn fx:id="itemType" text="Item Type" prefWidth="100">
+            </TableColumn>
+            <TableColumn fx:id="salesChannel" text="Sales Channel" prefWidth="80">
+            </TableColumn>
+            <TableColumn fx:id="orderPriority" text="Order Priority" prefWidth="40">
+            </TableColumn>
+            <TableColumn fx:id="orderDate" text="Order Date" prefWidth="100">
+            </TableColumn>
+            <TableColumn fx:id="orderId" text="Order ID" prefWidth="100">
+            </TableColumn>
+            <TableColumn fx:id="shipDate" text="Ship Date" prefWidth="100">
+            </TableColumn>
+            <TableColumn fx:id="unitsSold" text="Units Sold" prefWidth="80">
+            </TableColumn>
+            <TableColumn fx:id="unitPrice" text="Unit Price" prefWidth="80">
+            </TableColumn>
+            <TableColumn fx:id="unitCost" text="Unit Cost" prefWidth="80">
+            </TableColumn>
+            <TableColumn fx:id="totalRevenue" text="Total Revenue" prefWidth="100">
+            </TableColumn>
+            <TableColumn fx:id="totalCost" text="Total Cost" prefWidth="100">
+            </TableColumn>
+            <TableColumn fx:id="totalProfit" text="Total Profit" prefWidth="100">
+            </TableColumn>
+        </columns>
+    </TableView>
 </GridPane>
