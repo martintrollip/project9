@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * TODO list assumptions
+ * Test the {@link Reader} by stepping through a smaller test CSV with numbered entries.
  *
  * @author Martin Trollip
  * @since 2020/06/16 18:24
@@ -54,19 +54,5 @@ public class FileReaderTest {
         Assert.assertEquals(0, next.size());
 
         Assert.assertFalse(reader.hasNext());
-    }
-
-    //TODO test small stream
-
-    //TODO test stream with exactly 100.
-
-    private List<String> createTestList() {
-        List<String> list = new ArrayList<>();
-
-        for (int i = 0; i < 1_123; i++) {
-            list.add(String.valueOf(i));
-        }
-
-        return list;
     }
 }

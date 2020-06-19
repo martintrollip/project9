@@ -1,6 +1,8 @@
 package martintrollip.task2;
 
 /**
+ * Personal details. Use the builder to construct a new instance.
+ *
  * @author Martin Trollip
  * @since 2020/06/18 19:06
  */

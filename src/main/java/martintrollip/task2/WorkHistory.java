@@ -1,6 +1,8 @@
 package martintrollip.task2;
 
 /**
+ * WorkHistory. Use the builder to construct a new instance.
+ *
  * @author Martin Trollip
  * @since 2020/06/18 19:07
  */

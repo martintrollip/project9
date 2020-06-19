@@ -4,6 +4,8 @@ import java.util.Collections;
 import java.util.List;
 
 /**
+ * Immutable and final CV.  Use the builder to construct a new instance
+ *
  * @author Martin Trollip
  * @since 2020/06/18 19:02
  */

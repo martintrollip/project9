@@ -1,6 +1,8 @@
 package martintrollip.task1.csv;
 
 /**
+ * Model for a Sale which can be constructed from a single line in the CSV.
+ *
  * @author Martin Trollip
  * @since 2020/06/16 15:19
  */

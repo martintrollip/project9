@@ -173,4 +173,4 @@ $RECYCLE.BIN/
 # End of https://www.toptal.com/developers/gitignore/api/java,windows,macos,intellij+all
 
 # Don't commit test csv data
-*.csv
+1500000 Sales Records.csv
