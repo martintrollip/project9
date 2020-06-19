@@ -18,9 +18,9 @@ Created a final (not extendable) and immutable POJO which represents a person's 
 
 ## [task 3](src/main/java/main/martintrollip/task3) 
 
-
+Implemented a Distance Table by extending a HashMap.  The combination of two strings will form the new `hashCode` using `string1.hashCode() + string2.hashCode()`.  Since the addition of integers are commutative the combined hash code for `string1 + string2` = `string2 + string1` allowing the distance between `string1` and `string2` to be persisted only once in the hash map.  The data set is small enough to make hash collisions unlikely. 
 
 ## [task 4](src/main/java/main/gew/evaluation/sorter)
 
-
+Implemented `cSorterImplementation`.  On instantiation, it will create a new file for logging and kick off a periodic thread to publish statistics (list size) every 700ms. To prevent `ConcurrentModification` exceptions a `ReentrantLock` was used.  This is locked before modifying the list, and unlocked after the sorting finished. A thread safe data type `CopyOnWriteArrayList` was also used.  On termination the scheduled thread is shutdown and the file output streams are closed. 
 
