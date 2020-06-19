@@ -26,6 +26,9 @@ import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
 
+/**
+ * Controller for the JavaFX application.  Setup time display, days until Christmas and loading a CSV paginated.
+ */
 public class Controller {
     private static final String HH_MM_SS = "hh:mm:ss";
     private static final DateTimeFormatter HH_MM_SS_FORMATTER = DateTimeFormatter.ofPattern(HH_MM_SS);

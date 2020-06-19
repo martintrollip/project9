@@ -2,6 +2,9 @@ package martintrollip.task1.csv;
 
 import javafx.concurrent.Task;
 
+/**
+ * A task for loading a CSV on a separate thread
+ */
 public class LoadCSVTask extends Task<Reader> {
 
     private final String file;

@@ -9,7 +9,11 @@ import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.ReentrantLock;
 
-//Task 4
+/**
+ * Implementation for task 4
+ *
+ * Implemented thread safety and used Collections.sort for soring the list after adding a new entry.
+ */
 public class cSorterImplementation implements ISorter {
 
     private final List<Double> sortedList = new CopyOnWriteArrayList<>();
