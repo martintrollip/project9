@@ -13,9 +13,9 @@ This is a JavaFX application.
 3. Loading a large CSV is also possible.  The CSV is paginated at 100k entries per load.  The loading of new entries runs on a separate task and thread to prevent the front end from lagging.  The UI gives the user an indication that the application is busy loading in the background. The CSV file should be present in `.\docs\1500000 Sales Records.csv`.  An error message will be shown otherwise.  The CSV can be downloaded from [here](http://eforexcel.com/wp/wp-content/uploads/2017/07/1500000%20Sales%20Records.7z).
 
 #### Requirements
-`JUnit` has to be added to the classpath to allow testing. 
-`1500000 Sales Records.csv` must be in `.\docs`
-`test_sales.csv` must be in `.\docs`, this is used for running test cases.
+- `JUnit` has to be added to the classpath to allow testing. 
+- `1500000 Sales Records.csv` must be in `.\docs`
+- `test_sales.csv` must be in `.\docs`, this is used for running test cases.
 
 ## [task 2](src/main/java/main/martintrollip/task2)
 
@@ -32,4 +32,4 @@ Implemented `cSorterImplementation`.  On instantiation, it will create a new fil
 The output is sorted and the statistics indicated ~1578 entries at the end of execution.
 
 #### Requirements
-`SortImplementation.jar` has to be included on the classpath. 
+- `SortImplementation.jar` has to be included on the classpath. 
