@@ -80,8 +80,9 @@ public class Controller {
         showCurrentTime();
     }
 
+    ScheduledExecutorService timer = Executors.newSingleThreadScheduledExecutor();
+
     private void showCurrentTime() {
-        ScheduledExecutorService timer = Executors.newSingleThreadScheduledExecutor();
         timer.scheduleAtFixedRate(
                 () -> Platform.runLater(() -> systemTimeLabel.setText(LocalDateTime.now().format(HH_MM_SS_FORMATTER))), 0, 100,
                 TimeUnit.MILLISECONDS);
@@ -159,5 +160,11 @@ public class Controller {
         ExecutorService executorService = Executors.newFixedThreadPool(1);
         executorService.execute(task);
         executorService.shutdown();
+    }
+
+    public void shutdown() {
+        System.out.println("Stopping");
+        timer.shutdown();
+        Platform.exit();
     }
 }
