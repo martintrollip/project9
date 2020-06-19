@@ -24,3 +24,4 @@ Implemented a Distance Table by extending a HashMap.  The combination of two str
 
 Implemented `cSorterImplementation`.  On instantiation, it will create a new file for logging and kick off a periodic thread to publish statistics (list size) every 700ms. To prevent `ConcurrentModification` exceptions a `ReentrantLock` was used.  This is locked before modifying the list, and unlocked after the sorting finished. A thread safe data type `CopyOnWriteArrayList` was also used.  On termination the scheduled thread is shutdown and the file output streams are closed. 
 
+The output is sorted and the statistics indicated ~1578 entries at the end of execution.
